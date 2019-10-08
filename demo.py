@@ -44,8 +44,7 @@ def demo():
     encoder = Model(inputs=data_input, outputs=encoder_input)
 
     # 构建解码模型
-    decoder_layer = autoencoder.layers[-1]
-    decoder = Model(inputs=decoder_input, outputs=decoder_layer(decoder_input))
+    decoder = Model(inputs=decoder_input, outputs=decoded)
 
     # compile autoencoder
     autoencoder.compile(optimizer='adam', loss='mse')
@@ -53,11 +52,11 @@ def demo():
     # training
     autoencoder.fit(x_train, x_train, epochs=20, batch_size=256, shuffle=True)
 
-    encoded_imgs = encoder.predict(x_test)
-    print(encoded_imgs)
+    encoded_iris = encoder.predict(x_test)
+    print(encoded_iris)
 
-    decoded_imgs = decoder.predict(encoded_imgs)
-    print(decoded_imgs)
+    decoded_iris = decoder.predict(encoded_iris)
+    print(decoded_iris)
 
     autoencoder_img = autoencoder.predict(x_test)
     print(autoencoder_img)
