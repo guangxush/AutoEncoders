@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e88361bf-66e7-4a4a-9f8e-d582cebf5ef8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Deep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="126">
+              <caret line="6" column="7" selection-start-line="6" selection-end-line="6" selection-end-column="7" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -36,11 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="414">
+              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b7b67e586c0b0f50f03ffec39c05ad57/Message/MessageTemp/23adf3716601763b8bd582c4d5f59465/File/demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="50" column="61" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="50" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -75,17 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/iris.data">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="344">
               <caret line="147" column="30" lean-forward="true" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CNN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="9" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -111,6 +112,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>imgs</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>iris</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -123,6 +132,7 @@
         <option value="$PROJECT_DIR$/CNN.py" />
         <option value="$PROJECT_DIR$/seq2seq.py" />
         <option value="$PROJECT_DIR$/deepAutoEncoder.py" />
+        <option value="$PROJECT_DIR$/baseline.py" />
         <option value="$PROJECT_DIR$/demo.py" />
       </list>
     </option>
@@ -247,19 +257,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570371613771</updated>
-      <workItem from="1570371616383" duration="6528000" />
+      <workItem from="1570371616383" duration="9120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6528000" />
+    <option name="totallyTimeSpent" value="9120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="950" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12576313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12576313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -269,7 +279,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36480185" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34965035" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44055945" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -285,19 +295,8 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/demo.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AutoEncoders$demo.coverage" NAME="demo Coverage Results" MODIFIED="1570499414396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AutoEncoders$demo.coverage" NAME="demo Coverage Results" MODIFIED="1570502793543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AutoEncoders$deepAutoEncoder.coverage" NAME="deepAutoEncoder Coverage Results" MODIFIED="1570465500690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -332,16 +331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Deep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deepAutoEncoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -356,13 +345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/iris.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="147" column="30" lean-forward="true" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -387,10 +369,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b7b67e586c0b0f50f03ffec39c05ad57/Message/MessageTemp/23adf3716601763b8bd582c4d5f59465/File/demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="50" column="61" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="50" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/iris.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="147" column="30" lean-forward="true" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="414">
+          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="7" selection-start-line="6" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

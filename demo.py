@@ -20,37 +20,41 @@ def demo():
     print(x_test.shape)
 
     # 压缩特征维度至5维
-    encoding_dim = 5
+    encoding_dim = 2
     # this is our input placeholder
     data_input = Input(shape=(4,), name="data_input")
     decoder_input = Input(shape=(encoding_dim,), name="decoder_input")
 
     # 编码层
-    encoded = Dense(128, activation='relu')(data_input)
-    encoded = Dense(64, activation='relu')(encoded)
-    encoded = Dense(10, activation='relu')(encoded)
-    encoder_input = Dense(encoding_dim)(encoded)
+    encoded_1 = Dense(128, activation='relu', name='encoded_1')(data_input)
+    encoded_2 = Dense(64, activation='relu', name='encoded_2')(encoded_1)
+    encoded_3 = Dense(10, activation='relu', name='encoded_3')(encoded_2)
+    encoded_4 = Dense(encoding_dim, name='encoded_4')(encoded_3)
 
     # 解码层
-    decoded = Dense(10, activation='relu')(encoder_input)
-    decoded = Dense(64, activation='relu')(decoded)
-    decoded = Dense(128, activation='relu')(decoded)
-    decoded = Dense(4, activation='tanh')(decoded)
+    decoded_1 = Dense(10, activation='relu', name='decode_1')(encoded_4)
+    decoded_2 = Dense(64, activation='relu', name='decoded_2')(decoded_1)
+    decoded_3 = Dense(128, activation='relu', name='decoded_3')(decoded_2)
+    decoded_4 = Dense(4, name='decoded_4')(decoded_3)
 
     # 构建自编码模型
-    autoencoder = Model(inputs=data_input, outputs=decoded)
+    autoencoder = Model(inputs=data_input, outputs=decoded_4)
 
     # 构建编码模型
-    encoder = Model(inputs=data_input, outputs=encoder_input)
+    encoder = Model(inputs=data_input, outputs=encoded_4)
 
     # 构建解码模型
-    decoder = Model(inputs=decoder_input, outputs=decoded)
+    _decoded_1 = autoencoder.get_layer(name='decode_1')(decoder_input)
+    _decoded_2 = autoencoder.get_layer(name='decoded_2')(_decoded_1)
+    _decoded_3 = autoencoder.get_layer(name='decoded_3')(_decoded_2)
+    _decoded_4 = autoencoder.get_layer(name='decoded_4')(_decoded_3)
+    decoder = Model(inputs=decoder_input, outputs=_decoded_4)
 
     # compile autoencoder
     autoencoder.compile(optimizer='adam', loss='mse')
 
     # training
-    autoencoder.fit(x_train, x_train, epochs=20, batch_size=256, shuffle=True)
+    autoencoder.fit(x_train, x_train, epochs=10, batch_size=10, shuffle=True)
 
     encoded_iris = encoder.predict(x_test)
     print(encoded_iris)
