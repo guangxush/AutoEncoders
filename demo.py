@@ -54,7 +54,7 @@ def demo():
     autoencoder.compile(optimizer='adam', loss='mse')
 
     # training
-    autoencoder.fit(x_train, x_train, epochs=10, batch_size=10, shuffle=True)
+    autoencoder.fit(x_train, x_train, epochs=100, batch_size=10, shuffle=True)
 
     encoded_iris = encoder.predict(x_test)
     print(encoded_iris)
