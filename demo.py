@@ -27,8 +27,8 @@ def demo():
     encoding_dim = 2
 
     # this is our input placeholder
-    input_img = Input(shape=(4,))
-    decoder_input = Input(shape=(encoding_dim,))
+    input_img = Input(shape=(4,), name="input_img")
+    decoder_input = Input(shape=(encoding_dim,), name="decoder_input")
 
     # 编码层
     encoded = Dense(128, activation='relu')(input_img)
@@ -49,7 +49,7 @@ def demo():
     encoder = Model(inputs=input_img, outputs=encoder_output)
 
     # 构建解码模型
-    # decoder = Model(inputs=decoder_input, outputs=decoded)
+    decoder = Model(inputs=decoder_input, outputs=decoded)
 
     # compile autoencoder
     autoencoder.compile(optimizer='adam', loss='mse')
@@ -57,12 +57,11 @@ def demo():
     # training
     autoencoder.fit(x_train, x_train, epochs=20, batch_size=256, shuffle=True)
 
-    # plotting
     encoded_imgs = encoder.predict(x_test)
     print(encoded_imgs)
 
-    # decoded_imgs = decoder.predict(encoded_imgs)
-    # print(decoded_imgs)
+    decoded_imgs = decoder.predict(encoded_imgs)
+    print(decoded_imgs)
 
     autoencoder_img = autoencoder.predict(x_test)
     print(autoencoder_img)
