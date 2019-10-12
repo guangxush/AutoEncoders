@@ -15,19 +15,20 @@ def demo():
 
     x_train = train_dataset[0:train_level, 0:-1].astype('float')
     x_test = train_dataset[train_level:, 0:-1].astype('float')
-    x_train = x_train.reshape((len(x_train), np.prod(x_train.shape[1:])))
-    x_test = x_test.reshape((len(x_test), np.prod(x_test.shape[1:])))
+    x_train = x_train.reshape(x_train.shape[0], x_train.shape[1], 1)
+    x_train_output = x_train.reshape(x_train.shape[0], x_train.shape[1])
+    x_test = x_test.reshape(x_test.shape[0], x_test.shape[1], 1)
     print(x_train.shape)
     print(x_test.shape)
 
-    # 压缩特征维度至5维
+    # 压缩特征维度至2维
     encoding_dim = 2
     # this is our input placeholder
-    data_input = Input(shape=(4,), name="data_input")
+    data_input = Input(shape=(4, 1,), name="data_input")
     decoder_input = Input(shape=(encoding_dim,), name="decoder_input")
 
     # 编码层
-    encoded_1 = Conv1D(filters=16, kernel_size=2, padding='same', input_shape=(4, 1), activation='relu', strides=1,
+    encoded_1 = Conv1D(filters=16, kernel_size=2, padding='same', activation='relu', strides=1,
                        name='encoder_1')(data_input)
     encoded_2 = MaxPooling1D(pool_size=2, name='encoder_2')(encoded_1)
     encoder_3 = Flatten(name='encoder_3')(encoded_2)
@@ -44,7 +45,7 @@ def demo():
     autoencoder = Model(inputs=data_input, outputs=decoded_4)
 
     # 构建编码模型
-    encoder = Model(inputs=data_input, outputs=encoded_4)
+    encoder = Model(inputs=data_input, outputs=encoded_5)
 
     # 构建解码模型
     _decoded_1 = autoencoder.get_layer(name='decode_1')(decoder_input)
@@ -57,7 +58,7 @@ def demo():
     autoencoder.compile(optimizer='adam', loss='mse')
 
     # training
-    autoencoder.fit(x_train, x_train, epochs=100, batch_size=10, shuffle=True)
+    autoencoder.fit(x_train, x_train_output, epochs=100, batch_size=10, shuffle=True)
 
     encoded_iris = encoder.predict(x_test)
     print(encoded_iris)
