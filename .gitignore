@@ -1,0 +1,10 @@
+*.pyc
+.idea/
+.DS_Store
+*.ipynb
+.ipynb_checkpoints/
+!data/*.mod
+.mod
+.hdf5
+.h5
+.pkl
