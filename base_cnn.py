@@ -43,6 +43,7 @@ def demo():
 
     # 构建自编码模型
     autoencoder = Model(inputs=data_input, outputs=decoded_4)
+    autoencoder.summary()
 
     # 构建编码模型
     encoder = Model(inputs=data_input, outputs=encoded_5)
